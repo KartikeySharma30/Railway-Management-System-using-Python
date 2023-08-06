@@ -1,0 +1,39 @@
+COUSTOMER DATA:
+CREATE TABLE `coustomer_data` (
+  `user_Name` char(30) NOT NULL,
+  `password` char(20) NOT NULL,
+  `First_Name` varchar(30) NOT NULL,
+  `Last_Name` varchar(45) NOT NULL,
+  `Age` int NOT NULL,
+  `Email` varchar(45) DEFAULT NULL,
+  `Aadhar_No` varchar(45) NOT NULL,
+  `Ph_No` int NOT NULL,
+  `City` varchar(45) NOT NULL,
+  `PinCode` varchar(45) NOT NULL,
+  PRIMARY KEY (`user_Name`),
+  UNIQUE KEY `password_UNIQUE` (`password`),
+  UNIQUE KEY `Ph_No_UNIQUE` (`Ph_No`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+RESERVATION:
+CREATE TABLE `reservation` (
+  `Name_Of_Traveller` char(50) NOT NULL,
+  `user_Name` char(50) NOT NULL,
+  `Age_Of_Traveller` int NOT NULL,
+  `Gender_of_Traveller` char(10) NOT NULL,
+  `Food_on_rail` char(5) NOT NULL,
+  `Date_of_travel` date NOT NULL,
+  `TrainName` char(50) NOT NULL,
+  `PNR_No` int NOT NULL,
+  PRIMARY KEY (`PNR_No`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+Stations:
+CREATE TABLE `station` (
+  `Station_Name` char(50) NOT NULL,
+  `Station_code` char(20) NOT NULL,
+  PRIMARY KEY (`Station_Name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
